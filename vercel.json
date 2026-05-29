@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ],
+  "functions": {
+    "api/analyze-all.js": {
+      "maxDuration": 300
+    },
+    "api/analyze.js": {
+      "maxDuration": 120
+    },
+    "api/chart.js": {
+      "maxDuration": 10
+    },
+    "api/scan.js": {
+      "maxDuration": 30
+    }
+  }
+}
