@@ -9,11 +9,20 @@
     "api/analyze.js": {
       "maxDuration": 120
     },
+    "api/alert.js": {
+      "maxDuration": 45
+    },
     "api/chart.js": {
       "maxDuration": 10
     },
     "api/scan.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/alert",
+      "schedule": "0 23 * * *"
+    }
+  ]
 }

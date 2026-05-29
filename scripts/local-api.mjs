@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import analyze from '../api/analyze.js';
 import analyzeAll from '../api/analyze-all.js';
+import alert from '../api/alert.js';
 import analysisLog from '../api/analysis-log.js';
 import chat from '../api/chat.js';
 import chart from '../api/chart.js';
@@ -74,6 +75,11 @@ async function adapt(req, res) {
 
   if (url.pathname === '/api/analyze-all') {
     await analyzeAll(req, res);
+    return;
+  }
+
+  if (url.pathname === '/api/alert') {
+    await alert(req, res);
     return;
   }
 
